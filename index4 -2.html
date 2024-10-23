@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> For loop -1</h1>
+
+    <script>
+
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*")
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>for loop -2</h1>
+
+    <script>
+
+        const rows = 5;
+
+        for (let i = rows; i >= 1; i--) {
+            let stars = '';
+
+            for (let j = 1; j <= i; j++) {
+                stars += '*';
+            }
+
+            document.write(stars + "<br>");
+        }
+
+    </script>
+
+    <h1>for loop -3</h1>
+
+    <script>
+        const rowse = 5;
+
+        for (let i = 1; i <= rowse; i++) {
+            let pattern = '';
+
+            for (let j = i; j < rowse; j++) {
+                pattern += '&nbsp;&nbsp;';
+            }
+
+            for (let k = 1; k <= i; k++) {
+                pattern += '*';
+            }
+
+            for (let l = 1; l < i; l++) {
+                pattern += '*';
+            }
+
+            document.write(pattern + "<br>");
+        }
+
+    </script>
+
+    <h1>for loop -4</h1>
+
+    <script>
+        const reverse = 5;
+
+        for (let i = reverse; i >= 1; i--) {
+            let pattern = '';
+
+            for (let j = 1; j <= (reverse - i); j++) {
+                pattern += '&nbsp;&nbsp;';
+            }
+
+            for (let j = 1; j <= (2 * i - 1); j++) {
+                pattern += '*';
+            }
+
+            document.write(pattern + "<br>");
+        }
+
+    </script>
+
+    <h1> for loop -5</h1>
+    <script>
+        function printDoubleHill(n) {
+            for (let i = 1; i <= n; i++) {
+
+                for (let j = 1; j <= i; j++) {
+                    document.write('*');
+                }
+
+                let spaces = 2 * (n - i);
+                for (let j = 1; j <= spaces; j++) {
+                    document.write('&nbsp;');
+                }
+
+                for (let j = 1; j <= i; j++) {
+                    document.write('*');
+                }
+
+                document.write('<br>');
+            }
+        }
+
+        printDoubleHill(5);
+    </script>
+
+    <h1>Square pattern #</h1>
+
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5; j++) {
+                document.write(" # ")
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Square pattern $</h1>
+
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5; j++) {
+                document.write(" $ ")
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Square pattern &</h1>
+
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5; j++) {
+                document.write(" & ")
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>diamond pattern</h1>
+
+    <script>
+        function printDiamond(n) {
+            for (let i = 1; i <= n; i++) {
+
+                for (let j = 1; j <= n - i; j++) {
+                    document.write('&nbsp;');
+                }
+
+                for (let j = 1; j <= 2 * i - 1; j++) {
+                    document.write('*');
+                }
+
+                document.write('<br>');
+            }
+
+            for (let i = n - 1; i >= 1; i--) {
+
+                for (let j = 1; j <= n - i; j++) {
+                    document.write('&nbsp;');
+                }
+
+                for (let j = 1; j <= 2 * i - 1; j++) {
+                    document.write('*');
+                }
+
+                document.write('<br>');
+            }
+        }
+
+        printDiamond(5);
+    </script>
+
+    <h1>Square pattern *</h1>
+
+
+
+    <script>
+        function numbertri(n) {
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write(i + " ");
+                }
+                document.write("<br>");
+            }
+        }
+        numbertri(4);
+    </script>
+
+    <h1>Number pyramid loop</h1>
+
+    <script>
+        function numberpyramidincreasing(n) {
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= n - i; j++) {
+                    document.write("&nbsp;&nbsp;");
+                }
+                for (let k = 1; k <= i; k++) {
+                    document.write(k + " ");
+                }
+                document.write("<br>");
+            }
+        }
+        numberpyramidincreasing(4);
+    </script>
+
+    <h1>reverse pyramid number loop</h1>
+
+    <script>
+        function reversepyramidnumber(n) {
+            for (let i = n; i >= 1; i--) {
+                for (let j = 1; j <= i; j++) {
+                    document.write(j + " ");
+                }
+                document.write("<br>");
+            }
+        }
+        reversepyramidnumber(4);
+    </script>
+
+    <h1>number changing loop</h1>
+
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(j + " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Hollow triangle pattern</h1>
+
+    <script>
+        let n = 5;
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n - i; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                if (k === 1 || k === 2 * i - 1 || i === n) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Right pascal,s Tringle</h1>
+
+    <script>
+        let m = 4;
+        for (let i = 1; i <= m; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+
+        for (let i = m - 1; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Zero onetriangle</h1>
+
+    <script>
+        let p = 4;
+
+        for (let i = 1; i <= p; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += (i + j) % 2;
+            }
+            document.write(row + "<br>");
+        }
+    </script>
+
+    <h1>Rombhush pattern</h1>
+    <script>
+        let t = 5; 
+        for (let i = 1; i <= t; i++) {
+            for (let j = 1; j < i; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let k = 1; k <= t; k++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>K pattern</h1>
+
+    <script>
+        for (let i = 0; i < 7; i++) {
+            for (let j = 0; j < 7; j++) {
+                if (j === 0 || i + j === 3 || i - j === 3) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+    <h1>Hollow Reverse pattern</h1>
+    <script>
+        let b = 5;
+
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < 2 * b - 1; j++) {
+                if (i === 0 || j === i || j === 2 * n - 2 - i) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Hollow diamond pyramid</h1>
+
+    <script>
+        let z = 5;
+
+        for (let i = 0; i < z; i++) {
+            for (let j = 0; j < z - i - 1; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = 0; j < 2 * i + 1; j++) {
+                if (j === 0 || j === 2 * i) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+
+        for (let i = n - 2; i >= 0; i--) {
+            for (let j = 0; j < z - i - 1; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = 0; j < 2 * i + 1; j++) {
+                if (j === 0 || j === 2 * i) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+
+
+    <h1>Hollow hourglass pattern</h1>
+
+    <script>
+        let v = 5;
+
+        for (let i = 0; i < v; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = 0; j < 2 * (v - i) - 1; j++) {
+                if (j === 0 || j === 2 * (v - i) - 2 || i === 0) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+
+        for (let i = 1; i < v; i++) {
+            for (let j = 0; j < v - i - 1; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = 0; j < 2 * i + 1; j++) {
+                if (j === 0 || j === 2 * i || i === v - 1) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Reverse number</h1>
+
+    <script>
+        let rev = 4;
+
+        for (let i = 1; i <= rev; i++) {
+            for (let j = i; j <= rows; j++) {
+                document.write(j + " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Mirror image pattern</h1>
+
+    <script>
+        let mirror = 4;
+
+        for (let i = 1; i <= rows; i++) {
+            for (let s = 1; s < i; s++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = i; j <= rows; j++) {
+                document.write(j + " ");
+            }
+            document.write("<br>");
+        }
+
+        for (let i = rows - 1; i >= 1; i--) {
+            for (let s = 1; s < i; s++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = i; j <= rows; j++) {
+                document.write(j + " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>Pascal's Triangle</h1>
+
+    <script>
+        let i = 4;
+
+        function factorial(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        function binomialCoefficient(n, k) {
+            return factorial(n) / (factorial(k) * factorial(n - k));
+        }
+
+        for (let i = 0; i < rows; i++) {
+            for (let s = 0; s < rows - i - 1; s++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = 0; j <= i; j++) {
+                document.write(binomialCoefficient(i, j) + " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

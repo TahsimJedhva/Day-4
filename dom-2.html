@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Visibility Toggle</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button onclick="toggleBtn()">Text Boxes</button> <br> <br>
+    <button onclick="toggleBox('textBox1')">Text Box 1</button> <br> <br>
+    <button onclick="toggleBox('textBox2')">Text Box 2</button> <br> <br>
+  </div>
+  <div id="textBox1" class="hidden">
+    <p>Text Box 1</p>
+  </div>
+  <div id="textBox2" class="hidden">
+    <p>Text Box 2</p>
+  </div>
+  <script>
+    function toggleBtn() {
+      const textBox1 = document.getElementById('textBox1');
+      const textBox2 = document.getElementById('textBox2');
+      textBox1.classList.toggle('hidden');
+      textBox2.classList.toggle('hidden');
+    }
+    function toggleBox(boxId) {
+      const textBox = document.getElementById(boxId);
+      textBox.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
